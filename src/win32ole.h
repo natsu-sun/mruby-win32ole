@@ -28,7 +28,7 @@
 #define ULL2NUM(val) INT2NUM((unsigned __int64)(val))
 #define NUM2LL(val) ((__int64)(TO_PDT((val))))
 #define NUM2ULL(val) ((unsigned __int64)(TO_PDT((val))))
-#define NUM2DBL(val) (mrb_to_flo(mrb, (val)))
+#define NUM2DBL(val) (mrb_as_float(mrb, (val)))
 #define ALLOC(type) ((type*)mrb_malloc(mrb, sizeof(type)))
 #define ALLOC_N(type, n) ((type *)mrb_malloc(mrb, sizeof(type) * (n)))
 #define ALLOCA_N(type, n) ((type *)alloca(sizeof(type) * (n)))
